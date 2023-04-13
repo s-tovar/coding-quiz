@@ -1,6 +1,7 @@
 var startQuizEl = document.querySelector(".start-quiz"); //.start-quiz is class #start-quiz is id
 var welcomeScreenEl = document.querySelector(".welcome-screen");
 var questionScreenEL = document.querySelector(".question-screen");
+var endQuizScreen = document.getElementById("end-quiz");
 
 var timeLeft = 75;
 
@@ -108,6 +109,10 @@ function checkAnswer(event) {
     },2000)
 }
 //function 
+function endQuiz() {
+    endQuizScreen.classList.remove('hide')
+
+}
 
 startQuizEl.addEventListener('click', startQuiz) //var will have an event listener for the click and will call function created to hide
 optionAEl.addEventListener('click', checkAnswer)
