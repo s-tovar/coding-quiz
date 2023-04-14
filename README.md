@@ -6,7 +6,8 @@ This website provides a coding bootcamp student a timed quiz on JavaScript funde
 
 ## Deployment
 
-Link: https://s-tovar.github.io/coding-quiz/
+[Screenshot 2023-04-13 at 10 44 14 PM](https://user-images.githubusercontent.com/123904059/231958514-bf70a7f2-eb29-4dc3-af56-88a5efe43348.png)
+
 
 ## ScreenShot 
 
