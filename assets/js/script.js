@@ -1,7 +1,9 @@
 var startQuizEl = document.querySelector(".start-quiz"); //.start-quiz is class #start-quiz is id
 var welcomeScreenEl = document.querySelector(".welcome-screen");
 var questionScreenEL = document.querySelector(".question-screen");
-var endQuizScreen = document.getElementById("end-quiz");
+var endQuizScreen = document.querySelector(".end-quiz");
+var submitInitials = document.getElementById("submitInitials");
+var initials = document.getElementById("initials");
 
 var timeLeft = 75;
 
@@ -14,6 +16,7 @@ function startTimer() {
         if (timeLeft <= 0) {
             clearInterval(countdownTimer);
             alert("Time's up!!");
+            endQuiz();
         }
     }, 1000);
 }
@@ -23,7 +26,7 @@ var questionIndex = 0;
 
 const questions = [
     {
-        question: 'Commonly used data types DO Not Incldue:?',
+        question: 'Commonly used data types DO Not include:?',
         optionA: '1. strings',
         optionB: '2. booleans',
         optionC: '3. alerts',
@@ -83,6 +86,8 @@ function displayNextQuestion() {
     var currentQuestion = questions[questionIndex]
     if(!currentQuestion){
         //the quiz is over do not display a question
+        endQuiz()
+        return
     }
 
     questionEl.textContent = currentQuestion.question;
@@ -90,6 +95,11 @@ function displayNextQuestion() {
     optionBEl.textContent = currentQuestion.optionB;
     optionCEl.textContent = currentQuestion.optionC;
     optionDEl.textContent = currentQuestion.optionD;
+}
+
+function endQuiz() {
+    questionScreenEL.classList.add('hide')
+    endQuizScreen.classList.remove('hide')
 }
 
 function checkAnswer(event) {
@@ -109,9 +119,18 @@ function checkAnswer(event) {
     },2000)
 }
 //function 
-function endQuiz() {
-    endQuizScreen.classList.remove('hide')
 
+
+function saveScore() {
+    var savedScores = JSON.parse(localStorage.getItem("scores")) || [];
+    var scoreEl = {
+        name: initials.value,
+        score: timeLeft,
+    };
+
+    savedScores.push(scoreEl);
+
+    localStorage.setItem("scores", JSON.stringify(savedScores))
 }
 
 startQuizEl.addEventListener('click', startQuiz) //var will have an event listener for the click and will call function created to hide
