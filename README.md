@@ -1,30 +1,25 @@
 # coding-quiz
 
-## User Story
+## Description
 
-As A coding bootcamp student
-I WANT to take a timed quiz on JavaScript fundementals that stores high scores 
-SO THAT I can gauge my progress compared to my peers. 
+This website provides a coding bootcamp student a timed quiz on JavaScript fundementals to review for their studies. The coding quiz allows the student to keep track of their high scores so they can gauge their progress compared to their peers. 
 
-## Acceptance Criteria 
+## Deployment
 
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
+Link: https://s-tovar.github.io/coding-quiz/
 
-## Mock up 
+## ScreenShot 
 
-Mock-Up
-The following animation demonstrates the application functionality:
+<link href="./assets/images/screen-shot1" />
 
 
+## Installation
 
-A GIF demonstrates a functioning quiz with a timer.
+N/A
+
+## Usage
+To use this coding quiz, the user is will be prompted to click on the start button. Upon pressing the button, the first question will appear with four options. Simultaneously, the timer will also begin to count down from 75 seconds. If the user answers correctly, their selection will be highlighted green. If they answer incorrectly, their selection will be highlighted red and the timer will reduce by 10 seconds. Upon ending the quiz, the user will be prompted to submit their initials and see their score. 
+
+## License
+
+
